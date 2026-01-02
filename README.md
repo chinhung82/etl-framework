@@ -62,19 +62,16 @@ Java HotSpot(TM) 64-Bit Server VM (build 21.0.9+7-LTS-338, mixed mode, sharing)
 Set the `JAVA_HOME` environment variable:
 
 **Windows:**
+Example:
 - Variable Name: `JAVA_HOME`
 - Variable Value: `C:\Program Files\Java\jdk-21`
 
-**Linux/Mac:**
-```bash
-export JAVA_HOME=/path/to/java
-```
-
 ## Setup Instructions
 
-### Step 1: Extract Project Files
+### Step 1: Clone or download Project Files
 
-Download and extract `etl_framework.zip` to your desktop or preferred location.
+Clone the repo from here to your desktop or preferred location from command prompt,
+or you can download the project and zip and extract them.
 
 ### Step 2: Database Setup
 
@@ -371,14 +368,3 @@ Main configuration is located in `config/config.yaml`. Customize the following:
 
 ---
 
-## License
-
-[Add your license information here]
-
-## Contributing
-
-[Add contributing guidelines here]
-
-## Support
-
-For issues or questions, please [add contact/support information here]
