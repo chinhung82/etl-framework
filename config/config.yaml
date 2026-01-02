@@ -1,0 +1,209 @@
+# ETL Configuration File
+# All configurable parameters for the ETL pipeline
+
+# Source Configuration
+source:
+  file_path: "data/input/vistra-gep-sample-legacy-data.csv"
+  file_format: "csv"
+  header: true
+  delimiter: ","
+  encoding: "UTF-8"
+
+# MySQL Database Configuration
+database:
+  host: "localhost"
+  port: 3306
+  database: "ems"
+  table: "entities"
+  user: "etluser"
+  password: "etlpass"
+  jdbc_url: "jdbc:mysql://localhost:3306/ems"
+  driver: "com.mysql.cj.jdbc.Driver"
+
+# Output Paths
+output:
+  quarantine_path: "data/output/quarantine"
+  quality_report_path: "data/output/quality_reports"
+  processed_path: "data/output/processed"
+  log_path: "logs"
+
+# Data Quality Rules
+data_quality:
+  # Required fields that must not be null
+  required_fields:
+    - entity_name
+    - entity_type
+  
+  # Valid values for categorical fields
+  valid_entity_types:
+    - "Company"
+    - "Partnership"
+    - "Trust"
+    - "Nonprofit"
+  
+  valid_statuses:
+    - "Active"
+    - "Inactive"
+    - "Pending"
+  
+  # Maximum field lengths (matching MySQL schema)
+  max_lengths:
+    entity_name: 150
+    entity_type: 30
+    registration_number: 50
+    country_code: 3
+    state_code: 50
+    status: 30
+    industry: 100
+    contact_email: 100
+
+# Date Format Configurations
+date_formats:
+  input_formats_IncorporationDate: # Standard formats (try in order)
+    - "yyyy-MM-dd"        # 2010-05-12
+    - "M/d/yy"            # 5/12/10
+    - "M/d/yyyy"          # 5/12/2010
+    - "d/M/yy"            # 12/5/10
+    - "dd/MM/yyyy"        # 18/06/2018
+    - "MM-dd-yy"          # 11-26-17
+    - "MM-dd-yyyy"        # 12-21-2015
+    - "d-MMM-yy"          # 2-Nov-20
+
+  input_formats_LastUpdate:
+    - "M/d/yy"            # 5/12/10
+
+  output_format: "yyyy-MM-dd"
+
+# Ambiguity date resolution 
+  ambiguity_resolution:
+    # When M/d/yy could be d/M/yy, which to try first?
+    # Options: "month_first" (US: 5/12/10 = May 12) 
+    #          "day_first" (International: 5/12/10 = Dec 5)
+    priority: "month_first"
+    
+    # Year threshold for 2-digit years
+    # If yy >= threshold, interpret as 19xx, else 20xx
+    year_threshold: 50  # 50-99 → 1950-1999, 00-49 → 2000-2049
+
+
+# Country Standardization Mapping
+country_mapping:
+  "Australia": "AU"
+  "CA": "CA"
+  "Canada": "CA"
+  "Germany": "DE"
+  "India": "IN"
+  "Malaysia": "MY"
+  "Singapore": "SG"
+  "UK": "GB"
+  "United Kingdom": "GB"
+  "United States": "US"
+  "US": "US"
+  "USA": "US"
+
+# State Code Standardization
+state_mapping:
+  "Arizona": "AZ"
+  "Bavaria": "BY"
+  "British Columbia": "BC"
+  "California": "CA"
+  "England": "ENG"
+  "Florida": "FL"
+  "Hamburg": "HH"
+  "Hesse": "HE"
+  "Illinois": "IL"
+  "Karnataka": "KARN"
+  "Maharashtra": "MH"
+  "Mumbai": "MUM"
+  "New Jersey": "NJ"
+  "New South Wales": "NSW"
+  "New York": "NY"
+  "Northern Ireland": "NIR"
+  "Ontario": "ON"
+  "Quebec": "QBC"
+  "Scotland": "SCT"
+  "Tamil Nadu": "TN"
+  "Texas": "TX"
+  "Victoria": "VIC"
+  "W.Bengal": "WB"
+  "Wales": "WLS"
+
+# Status Standardization
+status_mapping:
+  "Active": "Active"
+  "Inactive": "Inactive"
+  "Pending": "Pending"
+  "Actived": "Active"
+  "N": "Inactive"
+  "Y": "Active"
+
+# Industry Standardization
+industry_mapping:
+  "NULL": ""
+  "Real": "Real Estate"
+
+email_regex_pattern: "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$"
+
+# Deduplication Configuration
+deduplication:
+  # Strategy: exact_match, fuzzy_match, or composite
+  strategy: "composite"
+  
+  # Match criteria with weights
+  match_criteria:
+    entity_name_weight: 0.4
+    registration_number_weight: 0.6
+  
+  # Fuzzy matching threshold (0-1)
+  fuzzy_threshold: 0.85
+  
+  # Keep record preference: first, last, most_complete
+  keep_preference: "most_complete"
+
+# Logging Configuration
+logging:
+  level: "INFO"  # DEBUG, INFO, WARNING, ERROR, CRITICAL
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  max_file_size_mb: 10
+  backup_count: 5
+
+# Spark Configuration
+spark:
+  app_name: "Entity_ETL_Pipeline"
+  master: "local[1]"
+  config:
+    # Adaptive query execution
+    spark.sql.adaptive.enabled: "false" # Disable for tiny data
+    spark.sql.adaptive.coalescePartitions.enabled: "true"
+    
+    # Memory settings - Conservative for stability
+    spark.executor.memory: "4g"
+    spark.driver.memory: "4g"
+    spark.driver.maxResultSize: "1g"
+    
+    # Partitioning - adjust based on data size
+    spark.sql.shuffle.partitions: "2"  # Reduced from 200 for less overhead
+    spark.default.parallelism: "2"      # Reduced from 100
+    
+    # Memory optimization - Don't cache aggressively
+    spark.memory.fraction: "0.6"         # Default, don't over-allocate
+    spark.memory.storageFraction: "0.3"  # Less storage cache
+    
+    # Join optimization
+#    spark.sql.autoBroadcastJoinThreshold: "10485760"  # 10MB
+    
+    # File handling
+    spark.sql.files.maxPartitionBytes: "134217728"  # 128MB
+    spark.sql.files.openCostInBytes: "4194304"      # 4MB
+    
+    # Reduce overhead
+    spark.sql.autoBroadcastJoinThreshold: "-1"  # Disable broadcast for now
+
+    # MySQL Connector Jar
+    spark.jars: "libs/mysql-connector-j-9.5.0.jar"
+
+    spark.sql.legacy.timeParserPolicy: "LEGACY"
+    
+    ## Disable automatic caching
+    #spark.sql.inMemoryColumnarStorage.compressed: "true"
+    #spark.sql.inMemoryColumnarStorage.batchSize: "10000"

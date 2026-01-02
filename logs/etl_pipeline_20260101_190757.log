@@ -1,0 +1,92 @@
+2026-01-01 19:07:57,033 - ETL_Pipeline - INFO - Logging initialized. Log file: logs\etl_pipeline_20260101_190757.log
+2026-01-01 19:08:02,125 - ETL_Pipeline - INFO - Spark session initialized
+2026-01-01 19:08:02,126 - ETL_Pipeline - INFO - ETL Pipeline
+2026-01-01 19:08:02,127 - ETL_Pipeline - INFO - STEP 1: Extracting data from CSV...
+2026-01-01 19:08:02,127 - ETL_Pipeline.Extractor - INFO - Starting data extraction from: data/input/vistra-gep-sample-legacy-data.csv
+2026-01-01 19:08:05,866 - ETL_Pipeline.Extractor - INFO - Successfully extracted 100 records from source
+2026-01-01 19:08:06,448 - ETL_Pipeline - INFO - STEP 2: Cleaning data...
+2026-01-01 19:08:06,449 - ETL_Pipeline.Cleaner - INFO - Starting data cleaning process using SQL...
+2026-01-01 19:08:06,496 - ETL_Pipeline.Cleaner - INFO - Registered temp view: entities_raw
+2026-01-01 19:08:06,496 - ETL_Pipeline.Cleaner - INFO - Step 1: Cleaning string fields...
+2026-01-01 19:08:06,497 - ETL_Pipeline.Cleaner - INFO - Executing SQL file: 01_cleansing/clean_string_fields.sql
+2026-01-01 19:08:06,742 - ETL_Pipeline.Cleaner - INFO - SQL execution completed: 01_cleansing/clean_string_fields.sql
+2026-01-01 19:08:06,760 - ETL_Pipeline.Cleaner - INFO - Registered temp view: entities_clean_strings
+2026-01-01 19:08:06,761 - ETL_Pipeline.Cleaner - INFO - Step 2: Parsing and standardizing dates...
+2026-01-01 19:08:06,761 - ETL_Pipeline.Cleaner - INFO - Executing SQL file: 01_cleansing/parse_dates.sql
+2026-01-01 19:08:06,873 - ETL_Pipeline.Cleaner - INFO - SQL execution completed: 01_cleansing/parse_dates.sql
+2026-01-01 19:08:07,459 - ETL_Pipeline.Cleaner - INFO - Successfully parsed 99 date values
+2026-01-01 19:08:07,473 - ETL_Pipeline.Cleaner - INFO - Registered temp view: entities_dates
+2026-01-01 19:08:07,474 - ETL_Pipeline.Cleaner - INFO - Step 3: Standardizing country codes...
+2026-01-01 19:08:07,475 - ETL_Pipeline.Cleaner - INFO - Executing SQL file: 01_cleansing/standardize_country_codes.sql
+2026-01-01 19:08:07,548 - ETL_Pipeline.Cleaner - INFO - SQL execution completed: 01_cleansing/standardize_country_codes.sql
+2026-01-01 19:08:07,669 - ETL_Pipeline.Cleaner - INFO - Registered temp view: entities_countries
+2026-01-01 19:08:07,670 - ETL_Pipeline.Cleaner - INFO - Step 4: Standardizing state codes...
+2026-01-01 19:08:07,670 - ETL_Pipeline.Cleaner - INFO - Executing SQL file: 01_cleansing/standardize_state_codes.sql
+2026-01-01 19:08:07,706 - ETL_Pipeline.Cleaner - INFO - SQL execution completed: 01_cleansing/standardize_state_codes.sql
+2026-01-01 19:08:07,839 - ETL_Pipeline.Cleaner - INFO - Registered temp view: entities_states
+2026-01-01 19:08:07,839 - ETL_Pipeline.Cleaner - INFO - Step 5: Standardizing status values...
+2026-01-01 19:08:07,840 - ETL_Pipeline.Cleaner - INFO - Executing SQL file: 01_cleansing/standardize_status.sql
+2026-01-01 19:08:07,864 - ETL_Pipeline.Cleaner - INFO - SQL execution completed: 01_cleansing/standardize_status.sql
+2026-01-01 19:08:07,968 - ETL_Pipeline.Cleaner - INFO - Registered temp view: entities_status
+2026-01-01 19:08:07,969 - ETL_Pipeline.Cleaner - INFO - Step 6: Standardizing industry values...
+2026-01-01 19:08:07,969 - ETL_Pipeline.Cleaner - INFO - Executing SQL file: 01_cleansing/standardize_industry.sql
+2026-01-01 19:08:07,990 - ETL_Pipeline.Cleaner - INFO - SQL execution completed: 01_cleansing/standardize_industry.sql
+2026-01-01 19:08:08,103 - ETL_Pipeline.Cleaner - INFO - Registered temp view: entities_industry
+2026-01-01 19:08:08,114 - ETL_Pipeline.Cleaner - INFO - Step 7: Cleaning email addresses...
+2026-01-01 19:08:08,115 - ETL_Pipeline.Cleaner - INFO - Executing SQL file: 01_cleansing/clean_email_addresses.sql
+2026-01-01 19:08:08,187 - ETL_Pipeline.Cleaner - INFO - SQL execution completed: 01_cleansing/clean_email_addresses.sql
+2026-01-01 19:08:08,356 - ETL_Pipeline.Cleaner - INFO - Data cleaning process completed
+2026-01-01 19:08:08,356 - ETL_Pipeline - INFO - STEP 3: Deduplicating records...
+2026-01-01 19:08:08,357 - ETL_Pipeline.Deduplicator - INFO - ================================================================================
+2026-01-01 19:08:08,358 - ETL_Pipeline.Deduplicator - INFO - STARTING DEDUPLICATION PROCESS
+2026-01-01 19:08:08,358 - ETL_Pipeline.Deduplicator - INFO - ================================================================================
+2026-01-01 19:08:08,371 - ETL_Pipeline.Deduplicator - INFO - Registered temp view: entities_clean
+2026-01-01 19:08:08,498 - ETL_Pipeline.Deduplicator - INFO - Input records: 100
+2026-01-01 19:08:08,501 - ETL_Pipeline.Deduplicator - INFO - 
+Start remove duplicates...
+2026-01-01 19:08:08,502 - ETL_Pipeline.Deduplicator - INFO - Executing SQL file: 02_deduplication/remove_duplicates.sql
+2026-01-01 19:08:08,945 - ETL_Pipeline.Deduplicator - INFO - SQL execution completed: 02_deduplication/remove_duplicates.sql
+2026-01-01 19:08:11,241 - ETL_Pipeline.Deduplicator - INFO - 
+================================================================================
+2026-01-01 19:08:11,242 - ETL_Pipeline.Deduplicator - INFO - DEDUPLICATION SUMMARY
+2026-01-01 19:08:11,243 - ETL_Pipeline.Deduplicator - INFO - ================================================================================
+2026-01-01 19:08:11,243 - ETL_Pipeline.Deduplicator - INFO - Original records:              100
+2026-01-01 19:08:11,244 - ETL_Pipeline.Deduplicator - INFO - Final unique records:          97
+2026-01-01 19:08:11,244 - ETL_Pipeline.Deduplicator - INFO - Total duplicates removed:      3
+2026-01-01 19:08:11,245 - ETL_Pipeline.Deduplicator - INFO - Deduplication rate:            3.00%
+2026-01-01 19:08:11,245 - ETL_Pipeline.Deduplicator - INFO - ================================================================================
+2026-01-01 19:08:11,246 - ETL_Pipeline - INFO - STEP 4: Validating data...
+2026-01-01 19:08:11,246 - ETL_Pipeline.Validator - INFO - Starting validation using SQL...
+2026-01-01 19:08:11,263 - ETL_Pipeline.Validator - INFO - Registered temp view: entities_validation_flag
+2026-01-01 19:08:11,264 - ETL_Pipeline.Validator - INFO - Adding validation flags...
+2026-01-01 19:08:11,264 - ETL_Pipeline.Validator - INFO - Executing SQL file: 03_validation/add_validation_flags.sql
+2026-01-01 19:08:11,373 - ETL_Pipeline.Validator - INFO - SQL execution completed: 03_validation/add_validation_flags.sql
+2026-01-01 19:08:11,383 - ETL_Pipeline.Validator - INFO - Registered temp view: entities_validated
+2026-01-01 19:08:11,384 - ETL_Pipeline.Validator - INFO - Calculating validation statistics...
+2026-01-01 19:08:11,385 - ETL_Pipeline.Validator - INFO - Executing SQL file: 03_validation/calculate_rejection_stats.sql
+2026-01-01 19:08:11,456 - ETL_Pipeline.Validator - INFO - SQL execution completed: 03_validation/calculate_rejection_stats.sql
+2026-01-01 19:08:13,008 - ETL_Pipeline.Validator - INFO - Valid: 96, Rejected: 1
+2026-01-01 19:08:13,060 - ETL_Pipeline.Validator - INFO - Executing SQL file: 03_validation/prepare_quarantine.sql
+2026-01-01 19:08:13,112 - ETL_Pipeline.Validator - INFO - SQL execution completed: 03_validation/prepare_quarantine.sql
+2026-01-01 19:08:14,276 - ETL_Pipeline - INFO - STEP 5: Transforming to target schema...
+2026-01-01 19:08:14,278 - ETL_Pipeline.Transformer - INFO - Starting transformation
+2026-01-01 19:08:14,278 - ETL_Pipeline.Transformer - INFO - Mapping to target schema...
+2026-01-01 19:08:14,278 - ETL_Pipeline.Transformer - INFO - Executing SQL file: 04_transformation/map_to_target_schema.sql
+2026-01-01 19:08:14,361 - ETL_Pipeline.Transformer - INFO - SQL execution completed: 04_transformation/map_to_target_schema.sql
+2026-01-01 19:08:14,376 - ETL_Pipeline.Transformer - INFO - Registered temp view: entities_transformed
+2026-01-01 19:08:14,377 - ETL_Pipeline.Transformer - INFO - Selecting final columns...
+2026-01-01 19:08:14,377 - ETL_Pipeline.Transformer - INFO - Executing SQL file: 04_transformation/select_final_columns.sql
+2026-01-01 19:08:14,435 - ETL_Pipeline.Transformer - INFO - SQL execution completed: 04_transformation/select_final_columns.sql
+2026-01-01 19:08:14,436 - ETL_Pipeline.Transformer - INFO - Transformation completed
+2026-01-01 19:08:14,437 - ETL_Pipeline - INFO - STEP 6: Loading to MySQL...
+2026-01-01 19:08:14,438 - ETL_Pipeline.Loader - INFO - Starting MySQL data load...
+2026-01-01 19:08:15,286 - ETL_Pipeline.Loader - INFO - Writing 96 records to MySQL table: entities
+2026-01-01 19:08:18,726 - ETL_Pipeline.Loader - INFO - Successfully loaded 96 records to MySQL
+2026-01-01 19:08:18,727 - ETL_Pipeline - INFO - STEP 7: Saving quarantine records...
+2026-01-01 19:08:19,613 - ETL_Pipeline.Loader - INFO - Saving 1 records to quarantine...
+2026-01-01 19:08:20,814 - ETL_Pipeline.Loader - INFO - Quarantine data saved to: data/output/quarantine\quarantine_validation_failed_20260101_190819.csv
+2026-01-01 19:08:20,815 - ETL_Pipeline - INFO - STEP 8: Generating quality report...
+2026-01-01 19:08:20,816 - ETL_Pipeline - INFO - ================================================================================
+2026-01-01 19:08:20,817 - ETL_Pipeline - INFO - ETL PIPELINE COMPLETED SUCCESSFULLY
+2026-01-01 19:08:20,818 - ETL_Pipeline - INFO - Quality Report: data\output\quality_reports\quality_report_20260101_190820.txt
+2026-01-01 19:08:20,819 - ETL_Pipeline - INFO - ================================================================================

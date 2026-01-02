@@ -1,0 +1,42 @@
+================================================================================
+ETL PIPELINE - DATA QUALITY REPORT
+================================================================================
+Generated: 2026-01-01 19:08:20
+
+SUMMARY STATISTICS
+--------------------------------------------------------------------------------
+Total Records Processed:    100
+Records Successfully Loaded: 96
+Records Rejected:           1
+Duplicate Records Found:    3
+Success Rate:               96.00%
+
+DATA QUALITY FIXES APPLIED
+--------------------------------------------------------------------------------
+Null Values Handled:        0
+Date Formats Fixed:         198
+Country Codes Standardized: 100
+State Codes Standardized:   100
+Status Standardized:        100
+Industry Standardized:      100
+
+REJECTION REASONS BREAKDOWN
+--------------------------------------------------------------------------------
+  Missing required fields                 : 1
+
+BEFORE/AFTER DATA QUALITY METRICS
+--------------------------------------------------------------------------------
+Metric                                  Before           After          Change
+--------------------------------------------------------------------------------
+Total Records                              100              96         -4 (-4.0%)
+EntityName                                 100              96         -4 (-4.0%)
+IncorporationDate                           96              93         -3 (-3.1%)
+CountryCode                                 99              96         -3 (-3.0%)
+StateCode                                   49              53         +4 (+8.2%)
+Status                                      98              95         -3 (-3.1%)
+Industry                                    99              96         -3 (-3.0%)
+ContactEmail                                90              87         -3 (-3.3%)
+
+================================================================================
+END OF REPORT
+================================================================================

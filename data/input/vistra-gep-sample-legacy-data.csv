@@ -1,0 +1,101 @@
+﻿EntityID,EntityName,EntityType,RegistrationNumber,IncorporationDate,Country,CountryCode,State,StateCode,Status,Industry,ContactEmail,LastUpdate
+1001,Acme Manufacturing,Company,REG10234,5/12/10,United States,US,California,CA,Active,Manufacturing,info@acmemfg.com,6/15/22
+1002,FastFinance Ltd,Company,REG56432,12/6/14,Singapore,SG,,SG,Inactive,Finance,contact@fastfin.sg,2/1/22
+1003,Pineview Foundation,Nonprofit,REG90088,7/30/11,United Kingdom,GB,England,ENG,Pending,Charity,,1/10/22
+1004,Acme Manufacturing,Company,REG10234,12/5/10,United States,US,California,CA,Active,Manufacturing,info@acmemfg.com,
+1005,Eastside Retailers,Partnership,,12/1/14,United States,US,New York,NY,Active,Retail,eastside@example.com,1/25/22
+1006,GreenRidge Trust,Trust,REG88722,,Canada,CA,Ontario,ON,Active,Real Estate,trust@greenridge.com,3/11/22
+1007,BlueSky Holdings,Company,REG33212,18/6/18,United Kingdom,GB,Scotland,SCT,Active,Holding,,11/22/21
+1008,Vivo Trading,Company,,4/17/20,United States,US,Texas,TX,Active,Trading,,3/9/22
+1009,SunTech Industries,Company,REG55789,3/10/15,Australia,AU,New South Wales,NSW,Active,Technology,contact@suntech.com.au,4/24/22
+1010,NorthStar Ventures,Partnership,REG20773,9/25/09,Canada,CA,Quebec,QBC,,Finance,,12/19/21
+1011,Global Foods,Company,REG88765,11/5/12,United States,US,Illinois,IL,Active,Manufacturing,support@globalfoods.com,5/3/22
+1012,Eagle Logistics,Company,REG90023,2/15/13,United Kingdom,GB,Northern Ireland,NIR,Inactive,Trading,contact@eaglelogistics.co.uk,1/16/22
+1013,Oceana Group,Trust,,7/8/11,Singapore,SG,,SG,Active,Retail,,2/25/22
+1014,IronBank Ltd,Company,REG43012,8/13/18,United States,US,New York,NY,Active,Finance,hello@ironbank.com,3/30/22
+1015,MegaWare Tech,Company,,4/21/16,India,IN,Maharashtra,MH,Pending,Technology,contact@megaware.in,
+1016,Silverline Holdings,Company,REG76234,12/31/19,Germany,DE,Bavaria,BY,Inactive,Holding,,1/27/22
+1017,Nova Nonprofit,Nonprofit,,11/11/20,United States,US,Florida,FL,Active,Charity,info@novanonprofit.org,6/10/22
+1018,Pacific Traders,Company,,7/17/13,Singapore,SG,,SG,Active,Trading,pac.traders@pacific.sg,2/11/22
+1019,Greenwave Trust,Trust,REG33445,3/20/08,Canada,CA,British Columbia,BC,Active,Real Estate,trust@greenwave.ca,5/27/22
+1020,Starlight Group,Company,REG49871,5/19/12,United Kingdom,GB,Wales,WLS,Active,Manufacturing,,6/2/22
+1021,Bright Future Charity,Nonprofit,,10/10/15,United States,US,Texas,TX,Inactive,Charity,contact@brightfuture.org,
+1022,Quantum Finance,Company,REG76543,12/9/10,Germany,DE,Hesse,HE,Pending,Finance,quantum@finance.de,
+1023,RedLeaf Ventures,Partnership,REG55433,5/6/17,Canada,CA,Alberta,AB,Active,Retail,info@redleaf.ca,3/15/22
+1024,EastWind Trading,Company,,12/5/11,Australia,AU,Victoria,VIC,Active,Trading,contact@eastwind.com,5/20/22
+1025,StarLink Group,Company,REG21456,3/22/19,Singapore,SG,,SG,Inactive,Technology,support@starlink.sg,4/19/22
+1026,BlueWater Holdings,Trust,,9/17/21,United Kingdom,GB,England,ENG,Active,Real,,
+1027,OpalLogistics,Company,REG88888,7/12/16,United Kingdom,GB,,,Active,Trading,contact@opallog.co.uk,2/13/22
+1028,Meadowland Farms,Company,REG30001,10/14/12,United States,US,,,Active,Manufacturing,info@meadowlandfarms.com,5/5/22
+1029,Acme Manufacturing,Company,REG10234,5/12/10,United States,US,,,Active,Manufacturing,info@acmemfg.com,6/15/22
+1030,Vivo Trading,Company,,4/17/20,United States,US,,,Active,Trading,,3/9/22
+1031,GreenTech Innovations,Company,REG31245,6/5/18,Canada,CA,,,Active,Technology,info@greentech.ca,4/1/22
+1032,Blue Horizon Partners,Partnership,REG41234,11/30/15,Australia,AU,,,Active,Finance,contact@bluehorizon.com.au,2/22/22
+1033,Sunrise Healthcare,Nonprofit,REG22345,7/7/13,United States,US,,,Inactive,Healthcare,support@sunrisehealth.org,12/15/21
+1034,Quantum Solutions,Company,REG67489,9/18/17,United Kingdom,GB,,,Active,Technology,info@quantumsol.com,5/12/22
+1035,EcoBuild Ltd,Company,REG87945,5/3/14,Singapore,SG,,,Active,Real Estate,contact@ecobuild.sg,1/28/22
+1036,Silver Line Trust,Trust,REG33456,10/29/10,Canada,CA,,,Active,Trust,trust@silverline.ca,6/8/22
+1037,Northstar Ventures,Company,REG11223,2/14/16,Malaysia,MY-15,Labuan,,Pending,Finance,info@northstarventures.com,3/10/22
+1038,Windsor Holdings,Company,REG55412,1/5/19,United Kingdom,GB,,,Active,Holding,contact@windsorholdings.co.uk,4/18/22
+1039,Pioneer Retail,Company,REG78934,8/22/12,Australia,AU,,,Active,Retail,pioneer@retail.com.au,2/19/22
+1040,FreshFarm Organics,Company,REG44312,4/17/13,India,IN,,,Active,Manufacturing,info@freshfarm.in,5/7/22
+1041,Golden Gate Trust,Trust,REG55009,6/26/11,United States,US,,,Inactive,Trust,goldenGate.me,11/20/21
+1042,Lunar Tech,Company,REG63422,12/16/18,Singapore,SG,,,Active,Technology,contact@lunartech.sg,6/1/22
+1043,TrueNorth Partners,,,,,,,,,,,
+1044,Crystal Health,Nonprofit,,9/12/14,United Kingdom,GB,,,Active,Healthcare,support@crystalhealth.org,1/30/22
+1045,Maple Leaf Traders,Company,REG98721,11-26-17,Canada,CA,Ontario,ON,Active,Trading,contact@mapleleaf.ca,5/15/22
+1046,Urban Estates,Company,REG33218,2/28/13,Australia,AU,Victoria,,Pending,Real Estate,info@urbanestates.au,2/25/22
+1047,Blue Ocean Shipping,Company,REG22445,8/9/11,US,US,,,Active,Logistics,contact@blueocean.com,4/29/22
+1048,Summerfield Ventures,Partnership,REG55667,5/14/16,United Kingdom,GB,London,,Active,Finance,info@summerfield.co.uk,3/22/22
+1049,Green Valley Farms,Company,REG67789,7/25/14,India,IN,Maharashtra,,Active,Agriculture,contact@greenvalley.in,6/3/22
+1050,Horizon Solutions,Company,REG99910,1/30/12,Singapore,SG,,,Inactive,Consulting,support@horizon.sg,12/5/21
+1051,Everest Construction,Company,,5/19/15,USA,US,California,CA,Active,Construction,contact@everestbuild.com,2/16/22
+1052,Silverstone Trust,Trust,REG56012,11/11/10,Canada,CA,,,Active,Real Estate,trust@silverstone.ca,4/5/22
+1053,NewAge Analytics,Company,REG43211,10/2/18,United Kingdom,GB-EAW,,,Active,Technology,info@newageanalytics.co.uk,5/22/22
+1054,Sunset Hotels,Company,REG78645,3/13/13,Australia,AU,,,Active,Hospitality,contact@sunsethotels.com.au,1/18/22
+1055,Evergreen Organics,Company,REG23455,6/20/19,India,IN,,,Active,Agriculture,info@evergreenorganic.in,3/31/22
+1056,Liberty Bank,Company,REG11109,7/29/11,United States,US,Texas,TX,Pending,Finance,support@libertybank.com,5/10/22
+1057,Rising Star Ventures,Partnership,REG55432,1/5/14,Singapore,SG,,,Active,Finance,contact@risingstar.sg,4/14/22
+1058,Oceanic Trading,Company,REG90812,8/2/12,CA,CA,,,Active,Trading,info@oceanictrading.ca,2/23/22
+1059,Alpine Developments,Company,REG75003,5/19/13,United Kingdom,GB,Scotland,SCOT,Active,Real Estate,contact@alpinedev.co.uk,6/7/22
+1060,Prestige Autos,Company,REG43321,1/7/17,Australia,AU,Victoria,,Active,Manufacturing,info@prestigeauto.au,3/4/22
+1061,RedSun Innovations,Company,REG80123,10/21/15,Germany,DE,Bavaria,BY,Active,Technology,info@redsun.de,5/11/22
+1062,Teal Trust,Trust,,12/27/12,Canada,CA,Alberta,AB,Inactive,Trust,trust@tealtrust.ca,11/30/21
+1063,Happy Homes,Company,REG98432,,India,IN,,,Pending,Real Estate,support@happyhomes.in,2/9/22
+1064,BlueLight Media,Company,REG72234,4/9/18,United States,US,,,Active,Technology,info@bluelightmedia.com,5/29/22
+1065,Growth Ventures,Partnership,REG83211,2/25/14,UK,GB,,,Active,Finance,contact@growthventures.uk,3/19/22
+1066,Sunflower Trading,Company,REG75219,7/14/12,India,IN,Mumbai,MUM,Active,Trading,info@sunflowertrading.in,1/17/22
+1067,NorthAngle Nonprofit,Nonprofit,,9/11/13,US,US,,,Active,Charity,info@northangle.org,5/1/22
+1068,Oasis Holdings,Company,REG43289,12-21-15,Australia,AU,,,N,Holding,contact@oasisholdings.au,12/23/21
+1069,NextGen Technologies,Company,REG65443,5/27/17,Singapore,SG,,,Active,Technology,info@nextgentech.sg,6/29/22
+1070,Coral Farms,Company,REG89809,11/3/14,India,IN,Karnataka,KARN,Pending,Agriculture,support@coralfarms.in,4/16/22
+1071,StarLogistics,Company,REG33332,3/19/11,United States,US,New Jersey,NJ,Active,Logistics,contact@starlogistics.com,2/20/22
+1072,Sunhill Trust,Trust,,10/2/10,Canada,CA,, ,Active,Trust,info@sunhilltrust.ca,5/21/22
+1073,Urban Foods,Company,REG88442,3/14/16,Australia,AU,,,Active,Manufacturing,info@urbanfoods.au,2/3/22
+1074,Future Vision Corp,Company,REG73284,6/21/19,United Kingdom,GB,,GB,Actived,Technology,contact@futurevision.co.uk,4/28/22
+1075,LoneStar Partners,Partnership,REG22122,8/10/12,United States,US,Texas,TX,Active,NULL,lone@starpartners.com,1/15/22
+1076,Maple Trust,Trust,,12/1/14,Canada,CA,Ontario,ON,Active,Real Estate,trust@mapletrust.ca,3/24/22
+1077,Radiant Retail,Company,REG87007,2-Nov-20,India,IN,,MH,Active,Retail,contact@radiantretail.in,6/16/22
+1078,Metropolis Holdings,Company,REG43105,9/22/17,Australia,AU,,,Inactive,Holding,support@metropolis.com.au,12/11/21
+1079,StarBright Innovations,Company,REG98101,11/15/13,Germany,DE,Hamburg,HH,Active,Technology,info@starbright.de,5/17/22
+1080,Cosmos Nonprofit,Nonprofit,,12/18/17,UK,GB,,ENG,Pending,Charity,info@cosmosnp.org,2/11/22
+1081,Elevate Construction,Company,REG88234,7/7/11,Singapore,SG,,,Active,Construction,contact@elevateconst.sg,4/30/22
+1082,Prime Traders,Company,REG73219,3/19/14,India,IN,Tamil Nadu,TN,Active,Trading,info@primetraders.in,5/9/22
+1083,Crystal Ventures,Partnership,,1/24/16,Canada,CA,,,Inactive,Finance,contact@crystalventures.ca,12/18/21
+1084,Opal Trust,Trust,,10/11/12,Australia,AU,,,Y,Trust,info@opaltrust.au,1/21/22
+1085,Horizon Retailers,Company,REG22994,6/28/15,India,IN,W.Bengal,WB,Active,Retail,contact@horizonretail.in,2/17/22
+1086,NewWave Shipping,Company,REG33742,4/11/19,United States,US,Florida,,Active,Logistics,info@newwaveship.com,5/25/22
+1087,FutureTech Ltd,Company,REG44321,,Singapore,SG,,,Pending,Technology,support@futuretech.sg,6/8/22
+1088,SilverStar Partners,Partnership,REG21119,6/25/12,United Kingdom,GB,,ENG,Active,Finance,contact@silverstar.co.uk,3/29/22
+1089,Redgate Holdings,Company,REG32145,9/14/14,Australia,AU,,,Inactive,Holding,info@redgate.com.au,11/24/21
+1090,GoldenNonprofit,Nonprofit,,7/2/11,United States,US,,,Active,Charity,info@goldennonprofit.org,1/12/22
+1091,Blue Sky Consulting,Company,REG99877,8/18/15,Canada,CA,British Columbia,,Pending,Consulting,contact@bluesky.ca,3/5/22
+1092,Tiger Innovations,Company,REG55591,2/2/18,Germany,DE,Berlin,,Active,Technology,info@tigerinnov.com,6/21/22
+1093,PeachFarm Holdings,Company,REG44119,5/13/13,India,IN,Tamil Nadu,,Active,Agriculture,peach@farmhold.in,1/9/22
+1094,StarTech Ventures,Company,REG77741,4/20/16,Singapore,SG,,SG,Active,Technology,support@startech.sg,6/27/22
+1095,Emerald Partners,Partnership,,9/15/12,United Kingdom,GB,,ENG,N,Finance,contact@emeraldpartners.co.uk,12/21/21
+1096,Bluebell Trust,Trust,REG33817,10/8/10,Australia,AU,,SYD,Active,Trust,info@bluebelltrust.au,5/30/22
+1097,Zen Construction,Company,REG99098,4/18/16,United States,US,Arizona,AZ,Pending,Construction,zen@construction.com,3/12/22
+1098,Palm Nonprofit,Nonprofit,,1/19/19,India,IN,,,Active,Charity,info@palmnp.org,4/9/22
+1099,Lime Retail,Company,REG21767,7/31/14,Australia,AU,,,Y,Retail,lime@retail.com.au,2/21/22
+1100,Golden Group,Company,REG82344,12/6/16,Canada,CA,,,Inactive,Holding,info@goldengroup.ca,11/6/21

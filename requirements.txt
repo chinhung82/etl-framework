@@ -1,0 +1,4 @@
+pyspark==3.5.1
+pyspark[sql]
+pyyaml==6.0.3
+pytest==9.0.2
